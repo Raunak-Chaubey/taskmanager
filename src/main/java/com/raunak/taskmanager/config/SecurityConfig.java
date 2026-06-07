@@ -19,18 +19,16 @@ import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 
 @Configuration
 @EnableWebSecurity
-@EnableWebMvc
 @EnableMethodSecurity
 @RequiredArgsConstructor
 public class SecurityConfig {
-    public static final String[] PUBLIC_URLS={
+    public static final String[] PUBLIC_URLS = {
             "/auth/**",
             "/api/auth/**",
             "/api/health",
-            "/v3/api-docs",
-            "/v2/api-docs",
-            "/swagger-resources/**",
+            "/v3/api-docs/**",
             "/swagger-ui/**",
+            "/swagger-ui.html",
             "/webjars/**"
     };
 
